@@ -1,5 +1,7 @@
 package Path;
 
+import java.io.File;
+import java.net.URL;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -9,10 +11,19 @@ public class InterfacePath {
         Path path = Paths.get("D:\\javaFile\\file.txt");
         Path directoryPath = Paths.get("D:\\javaFile");
 
+         File file =  path.toFile(); //вернуть пусть как объект File
+         File file2 =  new File(path.toUri());  //вернуть пусть как объект Url
+
+
+
         System.out.println(path.getFileName()); // имя файла
         System.out.println(directoryPath.getFileName()); //имя директории
+        //или
+        Path pathFileName = path.getFileName();
+        Path pathDirName = directoryPath.getFileName();
 
-        //получить директорию в которой находится файл ли директория
+
+        //получить директорию в которой находится файл или директория
         System.out.println(path.getParent()); // путь до файла
         System.out.println(directoryPath.getParent()); //путь до директории
 
@@ -26,12 +37,15 @@ public class InterfacePath {
 
         //полный путь к файлу или каталогу
         Path path2 = Paths.get("file.txt");
-        System.out.println(path.toAbsolutePath());
+        System.out.println(path2.toAbsolutePath());
         System.out.println(directoryPath.toAbsolutePath());
+
+        //Получение количества элементов в пути
+        int count = path.getNameCount();
+        System.out.println(count +" count");
 
         //если путь не указан вернет директорию в которой находится и сам файл как будто в ней
         System.out.println(path2.toAbsolutePath());
-
 
         // чтобы получить категорию в которой находится файл нужно
         //сначала получить абсолютный путь и после вызвать getParent
