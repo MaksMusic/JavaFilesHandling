@@ -1,7 +1,9 @@
 package Path;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -10,10 +12,17 @@ public class InterfacePath {
         // получить имя директории по пути
         Path path = Paths.get("D:\\javaFile\\file.txt");
         Path directoryPath = Paths.get("D:\\javaFile");
+        Path directoryPath2 = Paths.get("D:\\javaFile\\packege1\\catregory1\\categoryNext");
 
          File file =  path.toFile(); //вернуть пусть как объект File
-         File file2 =  new File(path.toUri());  //вернуть пусть как объект Url
+         File file2 =  new File(path.toUri());  //вернуть путь как объект Url
 
+        //Проверка существования файла или каталога по Path
+        boolean exists = Files.exists(path);
+
+        //Получение относительного пути от одного пути до другого
+        Path relative = directoryPath.relativize(directoryPath2);
+        System.out.println(relative +" relative");
 
 
         System.out.println(path.getFileName()); // имя файла
@@ -40,6 +49,8 @@ public class InterfacePath {
         System.out.println(path2.toAbsolutePath());
         System.out.println(directoryPath.toAbsolutePath());
 
+
+
         //Получение количества элементов в пути
         int count = path.getNameCount();
         System.out.println(count +" count");
@@ -60,6 +71,7 @@ public class InterfacePath {
         System.out.println(directoryPath.resolve("textJava.txt"));
         //или соединить путь директории с другим путем или файлом Paths.get
         System.out.println(path.resolve(Paths.get("textJava.txt")));
+
 
 
 
