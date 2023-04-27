@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 /**
  * работа с классом Files
  */
-public class ClassFiles {
+public class CreateAndDeleteFileOrDir {
     public static void main(String[] args) {
 
 
