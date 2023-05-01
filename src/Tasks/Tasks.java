@@ -21,7 +21,7 @@ public class Tasks {
             System.out.println("Файл не существует");
         }
 
-        /** Получить список всех файлов в директории по указанному пути.*/
+        /** 3 Получить список всех файлов в директории по указанному пути.*/
         //no Stream
         File dir = new File("/home/user/my_folder");
         File[] files = dir.listFiles();
