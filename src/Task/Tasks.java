@@ -21,7 +21,7 @@ public class Tasks {
             System.out.println("Файл не существует");
         }
 
-      /** Получить список всех файлов в директории по указанному пути.*/
+        /** Получить список всех файлов в директории по указанному пути.*/
         //no Stream
         File dir = new File("/home/user/my_folder");
         File[] files = dir.listFiles();
@@ -59,7 +59,7 @@ public class Tasks {
             e.printStackTrace();
         }
 
-        /**  1	Создать новый файл по указанному пути.*/
+        /**  6	Создать новый файл по указанному пути.*/
         Path file5 = Paths.get("/home/user/new_file.txt");
         try {
             Path newFile = Files.createFile(file5);
@@ -68,7 +68,7 @@ public class Tasks {
         }
 
 
-        /**  3.	Прочитать данные из файла.Вывести их на консоль*/
+        /**  7.	Прочитать данные из файла.Вывести их на консоль*/
         Path file7 = Paths.get("/home/user/my_file.txt");
         try {
             List<String> lines = Files.readAllLines(file7);
@@ -79,11 +79,38 @@ public class Tasks {
             e.printStackTrace();
         }
 
+        /** 8 Записать данные в файл..*/
+        String text =  "text";
+        try {
+            Files.write(path, text.getBytes(), Files.exists(path) ? java.nio.file.StandardOpenOption.APPEND :
+                    java.nio.file.StandardOpenOption.CREATE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
 
+        /** 9	Копировать файл в другую директорию.*/
+        Path sourceFile = Paths.get("/home/user/my_file.txt");
+        Path destinationFile = Paths.get("/home/user/my_folder/my_file_copy.txt");
+        try {
+            Files.copy(sourceFile, destinationFile, StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
+
+        /** 10 Удаление файла или каталога по Path:*/
+        try {
+            if (Files.isDirectory(path)) {
+                Files.delete(path);
+            } else {
+                Files.deleteIfExists(path);
+            }
+        } catch (IOException e) {
+            System.out.println("");
+        }
 
 
     }
