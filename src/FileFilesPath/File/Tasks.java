@@ -1,4 +1,4 @@
-package File;
+package FileFilesPath.File;
 
 import java.io.File;
 import java.io.IOException;
@@ -34,8 +34,8 @@ public class Tasks {
                 Path source = Paths.get(sourcePath);
                 Path destination = Paths.get(destinationPath);
                 Files.copy(source, destination);
-                // если файл 2 существует Files.copy(source, destination,StandardCopyOption.REPLACE_EXISTING);
-                System.out.println("File copied successfully.");
+                // если файл 2 существует FileFilesPath.Files.copy(source, destination,StandardCopyOption.REPLACE_EXISTING);
+                System.out.println("FileFilesPath.File copied successfully.");
             } catch (IOException e) {
                 System.out.println("Failed to copy file.");
             }
@@ -49,8 +49,8 @@ public class Tasks {
         long fileSizeBytes = file.length();
         double fileSizeMegabytes = (double) fileSizeBytes / (1024 * 1024);
 
-        System.out.println("File size in bytes: " + fileSizeBytes);
-        System.out.println("File size in megabytes: " + fileSizeMegabytes);
+        System.out.println("FileFilesPath.File size in bytes: " + fileSizeBytes);
+        System.out.println("FileFilesPath.File size in megabytes: " + fileSizeMegabytes);
 
 
     }

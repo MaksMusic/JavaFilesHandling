@@ -57,15 +57,15 @@ public class Comment {
 
 /**
  * Данная строка отвечает за запись комментария в файл.
- *   Files.write(file, content.getBytes(), Files.exists(file) ? java.nio.file.StandardOpenOption.APPEND :
+ *   FileFilesPath.Files.write(file, content.getBytes(), FileFilesPath.Files.exists(file) ? java.nio.file.StandardOpenOption.APPEND :
  *                         java.nio.file.StandardOpenOption.CREATE);
  *
- - Files.write() - метод для записи байтов в файл
- - file - объект типа Path представляющий путь до файла, в который будет производиться запись
+ - FileFilesPath.Files.write() - метод для записи байтов в файл
+ - file - объект типа FileFilesPath.Path представляющий путь до файла, в который будет производиться запись
  - content.getBytes() - преобразование строки content в байты для записи
- - Files.exists(file) - проверка существования файла по указанному пути file
+ - FileFilesPath.Files.exists(file) - проверка существования файла по указанному пути file
  - java.nio.file.StandardOpenOption.APPEND - опция указывающая не перезаписывать содержимое файла, а добавлять новые данные в конец файла
  - java.nio.file.StandardOpenOption.CREATE - опция указывающая, что если файл не существует, то он будет создан.
 
- Таким образом, если файл уже существует, то метод Files.write() добавит новый комментарий в конец файла. Если файла еще нет, то он будет создан, и в него будет записан первый комментарий.
+ Таким образом, если файл уже существует, то метод FileFilesPath.Files.write() добавит новый комментарий в конец файла. Если файла еще нет, то он будет создан, и в него будет записан первый комментарий.
  */

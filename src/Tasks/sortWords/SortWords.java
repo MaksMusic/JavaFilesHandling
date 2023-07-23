@@ -55,7 +55,7 @@ public class SortWords {
 
             // Указываем путь до папки, в которую будут записаны файлы
             String folderPath = "C:\\words";
-            // Создаем объект File для указанной папки
+            // Создаем объект FileFilesPath.File для указанной папки
             File folder = new File(folderPath);
             // Если папки не существует, то создаем ее
             if (!folder.exists()) {

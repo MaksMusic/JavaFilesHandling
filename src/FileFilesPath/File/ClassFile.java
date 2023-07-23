@@ -1,4 +1,4 @@
-package File;
+package FileFilesPath.File;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -7,13 +7,13 @@ import java.util.Arrays;
 public class ClassFile {
     public static void main(String[] args) {
 
-        // вариант 1 —оздание объекта File, представл€ющего каталог D://javaFile
+        // вариант 1 —оздание объекта FileFilesPath.File, представл€ющего каталог D://javaFile
         File dir1 = new File("D:\\javaFile");
 
-        // вариант 2 —оздание объекта File, представл€ющего файл "test.txt" в каталоге dir
+        // вариант 2 —оздание объекта FileFilesPath.File, представл€ющего файл "test.txt" в каталоге dir
         File file1 = new File(dir1, "text1.txt");
 
-        // вариант 3 —оздание объекта File, представл€ющего файл "test.txt" в каталоге "D://javaFile"
+        // вариант 3 —оздание объекта FileFilesPath.File, представл€ющего файл "test.txt" в каталоге "D://javaFile"
         File file2 = new File("D:\\javaFile", "text1.txt");
 
 
@@ -61,8 +61,8 @@ public class ClassFile {
         System.out.println(Arrays.toString(category.list()));
 
 
-        // возвращает массив файлов и подкаталогов, типа File
-        //File [] arrayFile = category.listFiles();
+        // возвращает массив файлов и подкаталогов, типа FileFilesPath.File
+        //FileFilesPath.File [] arrayFile = category.listFiles();
         System.out.println(Arrays.toString(category.listFiles()));
 
 
@@ -78,7 +78,7 @@ public class ClassFile {
         // данные о каталогах и файлах
         System.out.println(file.getName() + " getName");     //название файла и его тип
         System.out.println(file.getParent() + " getParent"); // полный путь папки где находитс€ папка  String
-        System.out.println(file.getParentFile());          // каталог папки или файла где находитс€ каталог или файл File
+        System.out.println(file.getParentFile());          // каталог папки или файла где находитс€ каталог или файл FileFilesPath.File
         System.out.println(file.lastModified());         // возвращает врем€ последнего изменени€ файла или
         System.out.println(new SimpleDateFormat().format(file.lastModified()));  //врем€ изменени€ файла
 

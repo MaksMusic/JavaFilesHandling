@@ -1,8 +1,6 @@
-package Path;
+package FileFilesPath.Path;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,10 +12,10 @@ public class InterfacePath {
         Path directoryPath = Paths.get("D:\\javaFile");
         Path directoryPath2 = Paths.get("D:\\javaFile\\packege1\\catregory1\\categoryNext");
 
-         File file =  path.toFile(); //вернуть пусть как объект File
+         File file =  path.toFile(); //вернуть пусть как объект FileFilesPath.File
          File file2 =  new File(path.toUri());  //вернуть путь как объект Url
 
-        //Проверка существования файла или каталога по Path
+        //Проверка существования файла или каталога по FileFilesPath.Path
         boolean exists = Files.exists(path);
 
         //Получение относительного пути от одного пути до другого

@@ -1,4 +1,4 @@
-package Files;
+package FileFilesPath.Files;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -41,9 +41,9 @@ public class CreateFileAndDir {
             if (Files.notExists(pathNew)) {
                 Files.createDirectories(path.toAbsolutePath().getParent());
                 Files.createFile(pathNew);
-                System.out.println("File created at path: " + pathNew);
+                System.out.println("FileFilesPath.File created at path: " + pathNew);
             } else {
-                System.out.println("File already exists at path: " + pathNew);
+                System.out.println("FileFilesPath.File already exists at path: " + pathNew);
             }
         } catch (IOException e) {
             System.out.println("Unable to create file at path: " + pathNew);

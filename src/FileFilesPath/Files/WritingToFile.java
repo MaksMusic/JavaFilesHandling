@@ -1,4 +1,4 @@
-package Files;
+package FileFilesPath.Files;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -12,7 +12,7 @@ public class WritingToFile {
     }
 
     /**
-     * Files.write() - это стандартный метод Java для записи в файл, он записывает байты в файл через OutputStream.
+     * FileFilesPath.Files.write() - это стандартный метод Java для записи в файл, он записывает байты в файл через OutputStream.
      * Он позволяет добавлять данные в уже существующий файл, используя параметр
      * java.nio.file.StandardOpenOption.APPEND.
      * или StandardOpenOption.WRITE для перезаписывания данных в файл

@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 public class Tasks {
     public static void main(String[] args) {
-        /** 1.	—оздать экземпл€р класса Path, указав путь к файлу или директории.*/
+        /** 1.	—оздать экземпл€р класса FileFilesPath.Path, указав путь к файлу или директории.*/
         Path path = Paths.get("C:/Users/user/Documents/my_file.txt");
 
 
@@ -101,7 +101,7 @@ public class Tasks {
 
 
 
-        /** 10 ”даление файла или каталога по Path:*/
+        /** 10 ”даление файла или каталога по FileFilesPath.Path:*/
         try {
             if (Files.isDirectory(path)) {
                 Files.delete(path);
