@@ -2,8 +2,11 @@ package FileFilesPath.Files;
 
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class WritingToFile {
 
@@ -29,27 +32,27 @@ public class WritingToFile {
     }
 
     /** rec
-     * FileWriter - класс из библиотеки java.io, который также используется для записи данных в файл.
-     * Он более удобен для записи текстовых строк в файл,
-     * так как он позволяет записывать строки без преобразования в байты,
-     * а также добавлять символы к уже существующим строкам
+     * запись в файл символов
      */
-    public void write2(String text1) {
-        try {
-            // Устанавливается значение true, что означает, что новые данные будут дописываться в конец файла.
-            // Если бы значение было false, то файл бы перезаписывался заново при выполнении записи
-            FileWriter writer = new FileWriter("listUser.txt", false);    //создать новый файл
-            writer.write(text1);    //добавить строку
-            writer.flush();         // добавить все изменения в файл
 
-            writer.append('=');     //добавить смивол на ту же строку
-            writer.flush();         // добавить все изменения в файл
-            writer.close();
+    public class FileExample {
+        public static void main(String[] args) {
+            String filePath = "path/to/file.txt";
+            String data = "Hello, World!";
 
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+            try {
+                Path path = Path.of(filePath);
+
+                // Записываем данные символами в файл
+                Files.writeString(path, data, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
+
+                System.out.println("Файл успешно записан.");
+            } catch (Exception e) {
+                System.out.println("Ошибка при записи файла: " + e.getMessage());
+            }
         }
     }
+
 
 
 }
