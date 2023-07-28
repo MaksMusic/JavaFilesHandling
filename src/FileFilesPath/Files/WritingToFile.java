@@ -15,11 +15,11 @@ public class WritingToFile {
     }
 
     /**
-     * FileFilesPath.Files.write() - это стандартный метод Java для записи в файл, он записывает байты в файл через OutputStream.
-     * Он позволяет добавлять данные в уже существующий файл, используя параметр
+     * FileFilesPath.Files.write() - СЌС‚Рѕ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РјРµС‚РѕРґ Java РґР»СЏ Р·Р°РїРёСЃРё РІ С„Р°Р№Р», РѕРЅ Р·Р°РїРёСЃС‹РІР°РµС‚ Р±Р°Р№С‚С‹ РІ С„Р°Р№Р» С‡РµСЂРµР· OutputStream.
+     * РћРЅ РїРѕР·РІРѕР»СЏРµС‚ РґРѕР±Р°РІР»СЏС‚СЊ РґР°РЅРЅС‹Рµ РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ С„Р°Р№Р», РёСЃРїРѕР»СЊР·СѓСЏ РїР°СЂР°РјРµС‚СЂ
      * java.nio.file.StandardOpenOption.APPEND.
-     * или StandardOpenOption.WRITE для перезаписывания данных в файл
-     * Также он автоматически закрывает соединение с файлом после записи.
+     * РёР»Рё StandardOpenOption.WRITE РґР»СЏ РїРµСЂРµР·Р°РїРёСЃС‹РІР°РЅРёСЏ РґР°РЅРЅС‹С… РІ С„Р°Р№Р»
+     * РўР°РєР¶Рµ РѕРЅ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё Р·Р°РєСЂС‹РІР°РµС‚ СЃРѕРµРґРёРЅРµРЅРёРµ СЃ С„Р°Р№Р»РѕРј РїРѕСЃР»Рµ Р·Р°РїРёСЃРё.
      */
     public void write(Path path, String text) {
         try {
@@ -32,7 +32,7 @@ public class WritingToFile {
     }
 
     /** rec
-     * запись в файл символов
+     * Р·Р°РїРёСЃСЊ РІ С„Р°Р№Р» СЃРёРјРІРѕР»РѕРІ
      */
 
     public class FileExample {
@@ -43,12 +43,12 @@ public class WritingToFile {
             try {
                 Path path = Path.of(filePath);
 
-                // Записываем данные символами в файл
+                // Р—Р°РїРёСЃС‹РІР°РµРј РґР°РЅРЅС‹Рµ СЃРёРјРІРѕР»Р°РјРё РІ С„Р°Р№Р»
                 Files.writeString(path, data, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.WRITE);
 
-                System.out.println("Файл успешно записан.");
+                System.out.println("Р¤Р°Р№Р» СѓСЃРїРµС€РЅРѕ Р·Р°РїРёСЃР°РЅ.");
             } catch (Exception e) {
-                System.out.println("Ошибка при записи файла: " + e.getMessage());
+                System.out.println("РћС€РёР±РєР° РїСЂРё Р·Р°РїРёСЃРё С„Р°Р№Р»Р°: " + e.getMessage());
             }
         }
     }

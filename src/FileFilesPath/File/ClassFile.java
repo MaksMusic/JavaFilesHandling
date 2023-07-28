@@ -7,34 +7,34 @@ import java.util.Arrays;
 public class ClassFile {
     public static void main(String[] args) {
 
-        // вариант 1 Создание объекта FileFilesPath.File, представляющего каталог D://javaFile
+        // РІР°СЂРёР°РЅС‚ 1 РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° FileFilesPath.File, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РµРіРѕ РєР°С‚Р°Р»РѕРі D://javaFile
         File dir1 = new File("D:\\javaFile");
 
-        // вариант 2 Создание объекта FileFilesPath.File, представляющего файл "test.txt" в каталоге dir
+        // РІР°СЂРёР°РЅС‚ 2 РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° FileFilesPath.File, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РµРіРѕ С„Р°Р№Р» "test.txt" РІ РєР°С‚Р°Р»РѕРіРµ dir
         File file1 = new File(dir1, "text1.txt");
 
-        // вариант 3 Создание объекта FileFilesPath.File, представляющего файл "test.txt" в каталоге "D://javaFile"
+        // РІР°СЂРёР°РЅС‚ 3 РЎРѕР·РґР°РЅРёРµ РѕР±СЉРµРєС‚Р° FileFilesPath.File, РїСЂРµРґСЃС‚Р°РІР»СЏСЋС‰РµРіРѕ С„Р°Р№Р» "test.txt" РІ РєР°С‚Р°Р»РѕРіРµ "D://javaFile"
         File file2 = new File("D:\\javaFile", "text1.txt");
 
 
         File fileDir = new File("D:\\javaFile\\packege1\\p1");
-        System.out.println(fileDir.mkdir() + " mkdir");     //вернут true если папка создастся
-        System.out.println(fileDir.mkdirs() + " mkdirs");     //вернут true если папки создадутся
+        System.out.println(fileDir.mkdir() + " mkdir");     //РІРµСЂРЅСѓС‚ true РµСЃР»Рё РїР°РїРєР° СЃРѕР·РґР°СЃС‚СЃСЏ
+        System.out.println(fileDir.mkdirs() + " mkdirs");     //РІРµСЂРЅСѓС‚ true РµСЃР»Рё РїР°РїРєРё СЃРѕР·РґР°РґСѓС‚СЃСЏ
 
 
         /**
-         * В данном примере, может произойти исключение, если:
+         * Р’ РґР°РЅРЅРѕРј РїСЂРёРјРµСЂРµ, РјРѕР¶РµС‚ РїСЂРѕРёР·РѕР№С‚Рё РёСЃРєР»СЋС‡РµРЅРёРµ, РµСЃР»Рё:
 
-         Пользователь, от имени которого запущено приложение, не имеет прав на запись в директорию "D:\javaFile",
-         куда пытается создаться файл.
+         РџРѕР»СЊР·РѕРІР°С‚РµР»СЊ, РѕС‚ РёРјРµРЅРё РєРѕС‚РѕСЂРѕРіРѕ Р·Р°РїСѓС‰РµРЅРѕ РїСЂРёР»РѕР¶РµРЅРёРµ, РЅРµ РёРјРµРµС‚ РїСЂР°РІ РЅР° Р·Р°РїРёСЃСЊ РІ РґРёСЂРµРєС‚РѕСЂРёСЋ "D:\javaFile",
+         РєСѓРґР° РїС‹С‚Р°РµС‚СЃСЏ СЃРѕР·РґР°С‚СЊСЃСЏ С„Р°Р№Р».
 
-         Файл с таким же именем ("file.txt") уже существует в заданной директории.
+         Р¤Р°Р№Р» СЃ С‚Р°РєРёРј Р¶Рµ РёРјРµРЅРµРј ("file.txt") СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІ Р·Р°РґР°РЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё.
 
-         Если указанный путь к файлу неверен, то это также может вызвать исключение при вызове createNewFile().
-         В таком случае необходимо проверить правильность указанного пути к файлу.
+         Р•СЃР»Рё СѓРєР°Р·Р°РЅРЅС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РЅРµРІРµСЂРµРЅ, С‚Рѕ СЌС‚Рѕ С‚Р°РєР¶Рµ РјРѕР¶РµС‚ РІС‹Р·РІР°С‚СЊ РёСЃРєР»СЋС‡РµРЅРёРµ РїСЂРё РІС‹Р·РѕРІРµ createNewFile().
+         Р’ С‚Р°РєРѕРј СЃР»СѓС‡Р°Рµ РЅРµРѕР±С…РѕРґРёРјРѕ РїСЂРѕРІРµСЂРёС‚СЊ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ СѓРєР°Р·Р°РЅРЅРѕРіРѕ РїСѓС‚Рё Рє С„Р°Р№Р»Сѓ.
          */
 
-        //создать новый файл
+        //СЃРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ С„Р°Р№Р»
         File fileNew = new File("D:\\javaFile\\", "file.txt");
         try {
             System.out.println(fileNew.createNewFile());
@@ -43,63 +43,63 @@ public class ClassFile {
         }
 
 
-        //переименовать файл или категоию
+        //РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ С„Р°Р№Р» РёР»Рё РєР°С‚РµРіРѕРёСЋ
         File currentsDir = new File("D:\\javaFile\\packege1\\p1");
         File editDir = new File("D:\\javaFile\\packege1\\catregory1");
         System.out.println(currentsDir.renameTo(editDir) + " rename");
 
 
-        /** Работа с директориями*/
+        /** Р Р°Р±РѕС‚Р° СЃ РґРёСЂРµРєС‚РѕСЂРёСЏРјРё*/
 
 
-        //ссылка на директорию
+        //СЃСЃС‹Р»РєР° РЅР° РґРёСЂРµРєС‚РѕСЂРёСЋ
         File category = new File("D:\\javaFile\\packege1");
 
-        // возвращает массив типа String из файлов и категорий, но только те что есть в указанной директории
-        //category.list() Массив типа String
+        // РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ С‚РёРїР° String РёР· С„Р°Р№Р»РѕРІ Рё РєР°С‚РµРіРѕСЂРёР№, РЅРѕ С‚РѕР»СЊРєРѕ С‚Рµ С‡С‚Рѕ РµСЃС‚СЊ РІ СѓРєР°Р·Р°РЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё
+        //category.list() РњР°СЃСЃРёРІ С‚РёРїР° String
         //String [] arrayStr = category.list();
         System.out.println(Arrays.toString(category.list()));
 
 
-        // возвращает массив файлов и подкаталогов, типа FileFilesPath.File
+        // РІРѕР·РІСЂР°С‰Р°РµС‚ РјР°СЃСЃРёРІ С„Р°Р№Р»РѕРІ Рё РїРѕРґРєР°С‚Р°Р»РѕРіРѕРІ, С‚РёРїР° FileFilesPath.File
         //FileFilesPath.File [] arrayFile = category.listFiles();
         System.out.println(Arrays.toString(category.listFiles()));
 
 
-        //проверки файлов или катлогов
+        //РїСЂРѕРІРµСЂРєРё С„Р°Р№Р»РѕРІ РёР»Рё РєР°С‚Р»РѕРіРѕРІ
         File fileDir2 = new File("D:\\javaFile");
         File file = new File("D:\\javaFile\\file.txt");
 
-        System.out.println(fileDir2.exists() + " exist");               //проверить есть ли файл или папка
-        System.out.println(file.isFile() + " isFile");                  //проверить является ли файлом
-        System.out.println(fileDir2.isDirectory() + " isDirectory");    //проверить является ли папкой
-        System.out.println(fileDir2.isHidden() + " isHidden");          //проверить является ли файл скрытым
+        System.out.println(fileDir2.exists() + " exist");               //РїСЂРѕРІРµСЂРёС‚СЊ РµСЃС‚СЊ Р»Рё С„Р°Р№Р» РёР»Рё РїР°РїРєР°
+        System.out.println(file.isFile() + " isFile");                  //РїСЂРѕРІРµСЂРёС‚СЊ СЏРІР»СЏРµС‚СЃСЏ Р»Рё С„Р°Р№Р»РѕРј
+        System.out.println(fileDir2.isDirectory() + " isDirectory");    //РїСЂРѕРІРµСЂРёС‚СЊ СЏРІР»СЏРµС‚СЃСЏ Р»Рё РїР°РїРєРѕР№
+        System.out.println(fileDir2.isHidden() + " isHidden");          //РїСЂРѕРІРµСЂРёС‚СЊ СЏРІР»СЏРµС‚СЃСЏ Р»Рё С„Р°Р№Р» СЃРєСЂС‹С‚С‹Рј
 
-        // данные о каталогах и файлах
-        System.out.println(file.getName() + " getName");     //название файла и его тип
-        System.out.println(file.getParent() + " getParent"); // полный путь папки где находится папка  String
-        System.out.println(file.getParentFile());          // каталог папки или файла где находится каталог или файл FileFilesPath.File
-        System.out.println(file.lastModified());         // возвращает время последнего изменения файла или
-        System.out.println(new SimpleDateFormat().format(file.lastModified()));  //время изменения файла
+        // РґР°РЅРЅС‹Рµ Рѕ РєР°С‚Р°Р»РѕРіР°С… Рё С„Р°Р№Р»Р°С…
+        System.out.println(file.getName() + " getName");     //РЅР°Р·РІР°РЅРёРµ С„Р°Р№Р»Р° Рё РµРіРѕ С‚РёРї
+        System.out.println(file.getParent() + " getParent"); // РїРѕР»РЅС‹Р№ РїСѓС‚СЊ РїР°РїРєРё РіРґРµ РЅР°С…РѕРґРёС‚СЃСЏ РїР°РїРєР°  String
+        System.out.println(file.getParentFile());          // РєР°С‚Р°Р»РѕРі РїР°РїРєРё РёР»Рё С„Р°Р№Р»Р° РіРґРµ РЅР°С…РѕРґРёС‚СЃСЏ РєР°С‚Р°Р»РѕРі РёР»Рё С„Р°Р№Р» FileFilesPath.File
+        System.out.println(file.lastModified());         // РІРѕР·РІСЂР°С‰Р°РµС‚ РІСЂРµРјСЏ РїРѕСЃР»РµРґРЅРµРіРѕ РёР·РјРµРЅРµРЅРёСЏ С„Р°Р№Р»Р° РёР»Рё
+        System.out.println(new SimpleDateFormat().format(file.lastModified()));  //РІСЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ С„Р°Р№Р»Р°
 
 
-        //возвращает размер файла в байтах
+        //РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
         System.out.println(file.length());
 
-        //возвращает размер файла в байтах
+        //РІРѕР·РІСЂР°С‰Р°РµС‚ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С…
         System.out.println(new File("D:\\javaFile\\picaso.bmp").length());
 
-        // путь к файлу или директории в виде строки
+        // РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РґРёСЂРµРєС‚РѕСЂРёРё РІ РІРёРґРµ СЃС‚СЂРѕРєРё
         System.out.println(file.getAbsolutePath());
 
-        // путь к файлу или директории в виде строки
+        // РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РґРёСЂРµРєС‚РѕСЂРёРё РІ РІРёРґРµ СЃС‚СЂРѕРєРё
         System.out.println(new File("D:\\javaFile").getAbsoluteFile());
 
         searchFileType(new File("D:\\javaFile"));
 
     }
 
-    //поиск файла по расширению
+    //РїРѕРёСЃРє С„Р°Р№Р»Р° РїРѕ СЂР°СЃС€РёСЂРµРЅРёСЋ
     public static void searchFileType(File category) {
         for (File fileStr : category.listFiles()) {
             if ((fileStr != null) && (fileStr.getName().endsWith(".txt"))) {

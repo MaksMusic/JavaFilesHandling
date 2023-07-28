@@ -12,7 +12,7 @@ public class Tasks {
     }
 
 
-    //Написать метод, который принимает путь к директории и выводит список всех файлов в ней и ее поддиректориях рекурсивно.
+    //РќР°РїРёСЃР°С‚СЊ РјРµС‚РѕРґ, РєРѕС‚РѕСЂС‹Р№ РїСЂРёРЅРёРјР°РµС‚ РїСѓС‚СЊ Рє РґРёСЂРµРєС‚РѕСЂРёРё Рё РІС‹РІРѕРґРёС‚ СЃРїРёСЃРѕРє РІСЃРµС… С„Р°Р№Р»РѕРІ РІ РЅРµР№ Рё РµРµ РїРѕРґРґРёСЂРµРєС‚РѕСЂРёСЏС… СЂРµРєСѓСЂСЃРёРІРЅРѕ.
     public static void listFiles(String directoryPath) {
         File dir = new File(directoryPath);
         File[] files = dir.listFiles();
@@ -27,14 +27,14 @@ public class Tasks {
     }
 
 
-    //Скопировать содержимое одного файла в другой. Оба файла заданы путями.
+    //РЎРєРѕРїРёСЂРѕРІР°С‚СЊ СЃРѕРґРµСЂР¶РёРјРѕРµ РѕРґРЅРѕРіРѕ С„Р°Р№Р»Р° РІ РґСЂСѓРіРѕР№. РћР±Р° С„Р°Р№Р»Р° Р·Р°РґР°РЅС‹ РїСѓС‚СЏРјРё.
     public class FileUtils {
         public static void copyFile(String sourcePath, String destinationPath) {
             try {
                 Path source = Paths.get(sourcePath);
                 Path destination = Paths.get(destinationPath);
                 Files.copy(source, destination);
-                // если файл 2 существует FileFilesPath.Files.copy(source, destination,StandardCopyOption.REPLACE_EXISTING);
+                // РµСЃР»Рё С„Р°Р№Р» 2 СЃСѓС‰РµСЃС‚РІСѓРµС‚ FileFilesPath.Files.copy(source, destination,StandardCopyOption.REPLACE_EXISTING);
                 System.out.println("FileFilesPath.File copied successfully.");
             } catch (IOException e) {
                 System.out.println("Failed to copy file.");
@@ -42,7 +42,7 @@ public class Tasks {
         }
     }
 
-    //Получить размер файла в байтах и мегабайтах
+    //РџРѕР»СѓС‡РёС‚СЊ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° РІ Р±Р°Р№С‚Р°С… Рё РјРµРіР°Р±Р°Р№С‚Р°С…
 
     public static void getFileSize(String filePath) {
         File file = new File(filePath);
@@ -55,7 +55,7 @@ public class Tasks {
 
     }
 
-    //Удалить директорию и все ее содержимое. Если директория не существует, метод должен вывести ошибку.
+    //РЈРґР°Р»РёС‚СЊ РґРёСЂРµРєС‚РѕСЂРёСЋ Рё РІСЃРµ РµРµ СЃРѕРґРµСЂР¶РёРјРѕРµ. Р•СЃР»Рё РґРёСЂРµРєС‚РѕСЂРёСЏ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РјРµС‚РѕРґ РґРѕР»Р¶РµРЅ РІС‹РІРµСЃС‚Рё РѕС€РёР±РєСѓ.
     public static boolean deleteDirectory(String directoryPath) {
         File dir = new File(directoryPath);
 
@@ -79,7 +79,7 @@ public class Tasks {
 
 
 
-    //Посчитать общий размер файлов в заданной директории и ее поддиректориях
+    //РџРѕСЃС‡РёС‚Р°С‚СЊ РѕР±С‰РёР№ СЂР°Р·РјРµСЂ С„Р°Р№Р»РѕРІ РІ Р·Р°РґР°РЅРЅРѕР№ РґРёСЂРµРєС‚РѕСЂРёРё Рё РµРµ РїРѕРґРґРёСЂРµРєС‚РѕСЂРёСЏС…
 
     public static long getTotalSize(String directoryPath) {
         File dir = new File(directoryPath);

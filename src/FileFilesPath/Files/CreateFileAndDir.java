@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 
 public class CreateFileAndDir {
     public static void main(String[] args) {
-        // получить имя директории по пути
+        // РїРѕР»СѓС‡РёС‚СЊ РёРјСЏ РґРёСЂРµРєС‚РѕСЂРёРё РїРѕ РїСѓС‚Рё
         Path path = Paths.get("D:\\javaFile\\file.txt");
         Path directoryPath = Paths.get("D:\\javaFile");
         Path directoryPath2 = Paths.get("D:\\javaFile\\packege1\\catregory1\\categoryNext");
@@ -15,18 +15,18 @@ public class CreateFileAndDir {
 
 
 
-        /**  5. Создать новую директорию или директории по указанному пути..*/
+        /**  5. РЎРѕР·РґР°С‚СЊ РЅРѕРІСѓСЋ РґРёСЂРµРєС‚РѕСЂРёСЋ РёР»Рё РґРёСЂРµРєС‚РѕСЂРёРё РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РїСѓС‚Рё..*/
         Path dirPath2 = Paths.get("D:\\JavaTest\\java2\\text.tet");
         try {
             Path newDir = Files.createDirectory(dirPath2);
-            System.out.println("Путь создан: " + dirPath2);
+            System.out.println("РџСѓС‚СЊ СЃРѕР·РґР°РЅ: " + dirPath2);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
 
 
-        /**  1	Создать новый файл по указанному пути.*/
+        /**  1	РЎРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ С„Р°Р№Р» РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РїСѓС‚Рё.*/
         Path file5 = Paths.get("D:\\JavaTest\\java2\\text2.tet");
         try {
             Path newFile = Files.createFile(file5);
@@ -35,8 +35,8 @@ public class CreateFileAndDir {
         }
 
 
-        /** Cоздание файла по указанному пути если нету то последнюю категорию и сам файл*/
-        Path pathNew = Paths.get("d:\\Users\\Admin\\Desktop\\2\\e\\text.txt");//файл
+        /** CРѕР·РґР°РЅРёРµ С„Р°Р№Р»Р° РїРѕ СѓРєР°Р·Р°РЅРЅРѕРјСѓ РїСѓС‚Рё РµСЃР»Рё РЅРµС‚Сѓ С‚Рѕ РїРѕСЃР»РµРґРЅСЋСЋ РєР°С‚РµРіРѕСЂРёСЋ Рё СЃР°Рј С„Р°Р№Р»*/
+        Path pathNew = Paths.get("d:\\Users\\Admin\\Desktop\\2\\e\\text.txt");//С„Р°Р№Р»
         try {
             if (Files.notExists(pathNew)) {
                 Files.createDirectories(path.toAbsolutePath().getParent());

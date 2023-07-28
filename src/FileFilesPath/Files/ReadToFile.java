@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ReadToFile {
     public static void main(String[] args) {
-        /**  3.	Прочитать данные из файла.Вывести их на консоль*/
+        /**  3.	РџСЂРѕС‡РёС‚Р°С‚СЊ РґР°РЅРЅС‹Рµ РёР· С„Р°Р№Р»Р°.Р’С‹РІРµСЃС‚Рё РёС… РЅР° РєРѕРЅСЃРѕР»СЊ*/
         Path file7 = Paths.get("/home/user/my_file.txt");
         try {
             List<String> lines = Files.readAllLines(file7);

@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 
-/** обход по дереву пути Path */
+/** РѕР±С…РѕРґ РїРѕ РґРµСЂРµРІСѓ РїСѓС‚Рё Path */
 public class WalkFileTreeOpenDirToFile{
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("C:\\Users\\Admin\\IdeaProjects\\JavaFilesHandling\\src\\h1");
@@ -13,27 +13,27 @@ public class WalkFileTreeOpenDirToFile{
 }
 
 class MyFileVisitor implements FileVisitor<Path> {
-    @Override//срабатывает перед обращением ко всем элементам папки
+    @Override//СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ РїРµСЂРµРґ РѕР±СЂР°С‰РµРЅРёРµРј РєРѕ РІСЃРµРј СЌР»РµРјРµРЅС‚Р°Рј РїР°РїРєРё
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
         System.out.println("Enter to Directory -> " + dir);
-        return FileVisitResult.CONTINUE; // означает продолжать работу
+        return FileVisitResult.CONTINUE; // РѕР·РЅР°С‡Р°РµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЂР°Р±РѕС‚Сѓ
     }
 
-    @Override // срабатывает при обращении к файлу
+    @Override // СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ РїСЂРё РѕР±СЂР°С‰РµРЅРёРё Рє С„Р°Р№Р»Сѓ
     public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
         System.out.println("file name -> " + file.getFileName());
-        return FileVisitResult.CONTINUE; // означает продолжать работу
+        return FileVisitResult.CONTINUE; // РѕР·РЅР°С‡Р°РµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЂР°Р±РѕС‚Сѓ
     }
 
-    @Override // срабатывает когда файл по каким либо причинам не доступен
+    @Override // СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ РєРѕРіРґР° С„Р°Р№Р» РїРѕ РєР°РєРёРј Р»РёР±Рѕ РїСЂРёС‡РёРЅР°Рј РЅРµ РґРѕСЃС‚СѓРїРµРЅ
     public FileVisitResult visitFileFailed(Path file, IOException exc) throws IOException {
         System.out.println("error while visiting file -> " + file.getFileName());
-        return  FileVisitResult.TERMINATE; //остановиться
+        return  FileVisitResult.TERMINATE; //РѕСЃС‚Р°РЅРѕРІРёС‚СЊСЃСЏ
     }
 
-    @Override //срабатывает после обращения ко всем элементам папки
+    @Override //СЃСЂР°Р±Р°С‚С‹РІР°РµС‚ РїРѕСЃР»Рµ РѕР±СЂР°С‰РµРЅРёСЏ РєРѕ РІСЃРµРј СЌР»РµРјРµРЅС‚Р°Рј РїР°РїРєРё
     public FileVisitResult postVisitDirectory(Path dir, IOException exc) throws IOException {
         System.out.println("Exit from directory xxx-> "+ dir);
-        return FileVisitResult.CONTINUE; // означает продолжать работу
+        return FileVisitResult.CONTINUE; // РѕР·РЅР°С‡Р°РµС‚ РїСЂРѕРґРѕР»Р¶Р°С‚СЊ СЂР°Р±РѕС‚Сѓ
     }
 }
