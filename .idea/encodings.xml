@@ -12,6 +12,7 @@
     <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/ReadToFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/WritingToFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/walkFileTree/WalkFileTreeCopyDirAndFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/walkFileTree/WalkFileTreeDeleteDirAndFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/walkFileTree/WalkFileTreeOpenDirToFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileOutputStream/FileInputStreamMain.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileOutputStream/FileOutputStreamMain.java" charset="UTF-8" />
