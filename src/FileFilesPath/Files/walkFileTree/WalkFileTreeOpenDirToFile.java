@@ -8,11 +8,11 @@ import java.nio.file.attribute.BasicFileAttributes;
 public class WalkFileTreeOpenDirToFile{
     public static void main(String[] args) throws IOException {
         Path path = Paths.get("C:\\Users\\Admin\\IdeaProjects\\JavaFilesHandling\\src\\h1");
-        Files.walkFileTree(path,new MyFileVisitor());
+        Files.walkFileTree(path,new MyFileVisitorOpen());
     }
 }
 
-class MyFileVisitor implements FileVisitor<Path> {
+class MyFileVisitorOpen implements FileVisitor<Path> {
     @Override//срабатывает перед обращением ко всем элементам папки
     public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs) throws IOException {
         System.out.println("Enter to Directory -> " + dir);

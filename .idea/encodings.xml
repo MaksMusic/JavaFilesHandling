@@ -4,6 +4,15 @@
     <file url="file://$PROJECT_DIR$/file.txt" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/BufferedReader/ReaderMain.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/BufferedReader/WriterMain.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/File/ClassFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/File/Tasks.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/CopyFileToDir.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/CreateFileAndDir.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/DeleteFileAndDir.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/ReadToFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/WritingToFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/walkFileTree/WalkFileTreeCopyDirAndFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/FileFilesPath/Files/walkFileTree/WalkFileTreeOpenDirToFile.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileOutputStream/FileInputStreamMain.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/FileOutputStream/FileOutputStreamMain.java" charset="UTF-8" />
   </component>

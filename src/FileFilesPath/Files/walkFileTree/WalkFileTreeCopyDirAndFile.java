@@ -8,16 +8,16 @@ public class WalkFileTreeCopyDirAndFile {
     public static void main(String[] args) throws IOException {
         Path source = Paths.get("C:\\Users\\Admin\\IdeaProjects\\JavaFilesHandling\\src\\h1");
         Path destination = Paths.get("C:\\Users\\Admin\\IdeaProjects\\JavaFilesHandling\\src\\copyH1");
-        Files.walkFileTree(source,new MyFileVisitor2(source,destination));
+        Files.walkFileTree(source,new MyFileVisitorCopy(source,destination));
 
     }
 }
 
-class MyFileVisitor2 extends SimpleFileVisitor<Path> {
+class MyFileVisitorCopy extends SimpleFileVisitor<Path> {
     private Path source;
     private Path destination;
 
-    public MyFileVisitor2(Path source, Path destination) {
+    public MyFileVisitorCopy(Path source, Path destination) {
         this.source = source;
         this.destination = destination;
     }
